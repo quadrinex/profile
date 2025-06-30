@@ -11,7 +11,7 @@
     <video autoplay loop muted playsinline class="bg-video">
         <source src="background.mp4" type="video/mp4">
     </video>
-    <audio id="audio" loop>
+    <audio autoplay controls loop="">
         <source src="audio.mp3" type="audio/mpeg">
     </audio>
     <div class="container">
@@ -34,14 +34,5 @@
                 </ul>
             </div>  
     </div>
-    <script>
-    document.addEventListener('click', function playAudioOnce() {
-        var audio = document.getElementById('audio');
-        if (audio.paused) {
-            audio.play();
-        }
-        document.removeEventListener('click', playAudioOnce);
-    });
-    </script>
 </body>
 </html>

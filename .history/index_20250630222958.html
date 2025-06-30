@@ -11,9 +11,7 @@
     <video autoplay loop muted playsinline class="bg-video">
         <source src="background.mp4" type="video/mp4">
     </video>
-    <audio id="audio" loop>
-        <source src="audio.mp3" type="audio/mpeg">
-    </audio>
+    <audio src="https://github.com/quadrinex/quadrinex.github.io/raw/refs/heads/main/audio.mp3" loop=""></audio>
     <div class="container">
             <div class="left, element">
                 <h1>Blablablabla</h1>
@@ -34,14 +32,5 @@
                 </ul>
             </div>  
     </div>
-    <script>
-    document.addEventListener('click', function playAudioOnce() {
-        var audio = document.getElementById('audio');
-        if (audio.paused) {
-            audio.play();
-        }
-        document.removeEventListener('click', playAudioOnce);
-    });
-    </script>
 </body>
 </html>
