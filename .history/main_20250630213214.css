@@ -12,22 +12,23 @@ body {
 .container {
     background: rgba(0,0,0,0.4);
     color: #ffffff;
-    border-radius: 22px;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 32px;
     position: relative;;
     font-family: satoshi-medium;
     letter-spacing: 1.5px;
     -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(100px);
 }
 
 .container::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 22px;
+  border-radius: 15px;
   border: 5px solid transparent;
   background: linear-gradient(45deg,#090979,#01BAEE) border-box;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
@@ -47,9 +48,3 @@ body {
     pointer-events: none;
     filter: blur(2px);
 }
-
-.element {
-    width: 50%;
-    padding: 20px;
-    border: 2px solid red;
-}  

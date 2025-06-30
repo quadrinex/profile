@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    padding: 2rem;
     position: relative;;
     font-family: satoshi-medium;
     letter-spacing: 1.5px;
@@ -50,6 +51,7 @@ body {
 
 .element {
     width: 50%;
+    float: left;
     padding: 20px;
     border: 2px solid red;
 }  
