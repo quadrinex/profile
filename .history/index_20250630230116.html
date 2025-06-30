@@ -11,6 +11,9 @@
     <video autoplay loop muted playsinline class="bg-video">
         <source src="background.mp4" type="video/mp4">
     </video>
+    <audio id="audio" loop>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
     <div class="container">
             <div class="left, element">
                 <h1>Blablablabla</h1>
@@ -34,23 +37,17 @@
     <div id="welcome-overlay" class="welcome-overlay">
         <div class="welcome-message">Cliquez pour entrer</div>
     </div>
-    <audio id="audio" loop>
-        <source src="audio.mp3" type="audio/mpeg">
-    </audio>
     <script>
     document.body.classList.add('locked');
-    function playAudioOnce() {
+    document.addEventListener('click', function playAudioOnce() {
+        var audio = document.getElementById('audio');
+        if (audio.paused) {
+            audio.play();
+        }
         document.getElementById('welcome-overlay').style.display = 'none';
         document.body.classList.remove('locked');
-        setTimeout(function() {
-            var audio = document.getElementById('audio');
-            if (audio.paused) {
-                audio.play();
-            }
-        }, 100);
         document.removeEventListener('click', playAudioOnce);
-    }
-    document.addEventListener('click', playAudioOnce);
+    });
     </script>
 </body>
 </html>
