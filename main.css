@@ -1,5 +1,7 @@
 @import url('satoshi.css');
 
+
+
 html {
     background: #031016;
 }
@@ -48,7 +50,7 @@ body {
     width: 104vw;
     height: 104vh;
     object-fit: cover;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
     filter: blur(2px);
 }
@@ -56,6 +58,7 @@ body {
 .element {
     width: 50%;
     padding: 20px;
+    z-index: 100;
 }
 
 .welcome-overlay {
@@ -75,12 +78,12 @@ body.locked .container,
 body.locked .bg-video,
 body.locked audio {
     filter: blur(8px) grayscale(1) brightness(0.5);
-    pointer-events: none;
-    user-select: none;
 }
 
 * {
     font-family: Satoshi-Medium, sans-serif;
+    cursor: url('cursor.png'), auto;
+    
 }
 
 .name {
@@ -123,4 +126,74 @@ body.locked audio {
     height: 120px;
     object-fit: cover;
 /*  box-shadow: 0 2px 16px rgba(0,0,0,0.3);  */
+}
+
+#cursor-line {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10001;
+}
+
+.rightside {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.column {
+  width: 50%;
+  padding: 10px;
+}
+
+.account{
+  background:#031016;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 8px;
+  padding: 2px;
+  text-decoration: none;
+  transition: transform 0.18s cubic-bezier(.22,1.61,.36,1), box-shadow 0.18s cubic-bezier(.22,1.61,.36,1);
+  will-change: transform, box-shadow;
+}
+
+.account, .account:visited, .account:active, .account:hover {
+  text-decoration: none !important;
+  color: #fff;
+}
+
+.account:hover, .account:focus {
+  transform: scale(1.07) perspective(400px) rotateY(-6deg) rotateX(2deg);
+  box-shadow: 0 8px 32px 0 rgba(0,234,255,0.18), 0 2px 8px 0 rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+.acc1c1 { /* premier compte colonne 1 */ }
+.acc2c1 { /* deuxième compte colonne 1 */ }
+.acc3c1 { /* troisième compte colonne 1 */ }
+.acc4c1 { /* quatrième compte colonne 1 */ }
+.acc1c2 { /* premier compte colonne 2 */ }
+.acc2c2 { /* deuxième compte colonne 2 */ }
+.acc3c2 { /* troisième compte colonne 2 */ }
+.acc4c2 { /* quatrième compte colonne 2 */ }
+
+.acctext{
+  padding-left: 10px;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.accicon{
+  color: #fff;
+  height: 24px;
+  width: 24px;
+  fill: #fff;
+}
+
+.account .acctext:visited, .account .acctext:active, .account .acctext:hover {
+    color: #fff;
+    text-decoration: none !important;
 }
