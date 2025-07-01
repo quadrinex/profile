@@ -76,7 +76,7 @@ body.locked audio {
 }
 
 * {
-    font-family: Satoshi-Medium;
+    font-family: Satoshi-Medium, sans-serif;
 }
 
 .name {
@@ -93,7 +93,7 @@ body.locked audio {
 }
 
 .alias {
-  font-family: Satoshi-MediumItalic;
+  font-family: Satoshi-MediumItalic, sans-serif;
   font-size: 0.8rem;
   color: #ffffff71;
   margin-top: -10px;
