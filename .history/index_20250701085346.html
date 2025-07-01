@@ -11,9 +11,9 @@
     <video autoplay loop muted playsinline class="bg-video" disablePictureInPicture>
         <source src="background.mp4" type="video/mp4">
     </video>
-    <div class="welcome-overlay" id="welcome-overlay">
+    <!-- <div class="welcome-overlay" id="welcome-overlay">
         <h1>Click Anywhere</h1>
-    </div>
+    </div> -->
     <div class="container">
             <div class="left, element">
                 <img src="avatar3.gif" class="avatar">
@@ -42,7 +42,6 @@
         document.removeEventListener('click', playAudioOnce);
     }
     document.addEventListener('click', playAudioOnce);
-    playAudioOnce(); // Play audio immediately on page load
     </script>
 </body>
 </html>

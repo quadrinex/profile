@@ -1,4 +1,12 @@
-@import url('satoshi.css');
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url('fonts/Satoshi-Medium.woff2') format('woff2'),
+       url('fonts/Satoshi-Medium.woff') format('woff'),
+       url('fonts/Satoshi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
 
 html, body {margin: 0; height: 100%; overflow: hidden}
 
@@ -52,6 +60,7 @@ body {
 .element {
     width: 50%;
     padding: 20px;
+    overflow: hidden;
 }
 
 .welcome-overlay {
@@ -67,6 +76,17 @@ body {
     align-items: center;
 }
 
+.welcome-message {
+    color: #fff;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 2rem 3rem;
+    background: rgba(30,30,30,0.7);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
 body.locked .container,
 body.locked .bg-video,
 body.locked audio {
@@ -79,44 +99,21 @@ body.locked audio {
     font-family: Satoshi-Medium;
 }
 
-.name {
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  margin-top: -10px;
 }
 
-.alias {
-  font-family: Satoshi-MediumItalic;
-  font-size: 0.8rem;
-  color: #ffffff71;
-  margin-top: -10px;
-}
 
-@keyframes glow {
+@-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #00EAFF, 0 0 50px #00EAFF, 0 0 60px #00EAFF;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   }
   to {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #00EAFF, 0 0 50px #00EAFF, 0 0 60px #00EAFF, 0 0 65px #00EAFF;
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
-}
-
-.avatar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-/*  box-shadow: 0 2px 16px rgba(0,0,0,0.3);  */
 }

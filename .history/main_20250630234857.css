@@ -67,6 +67,17 @@ body {
     align-items: center;
 }
 
+.welcome-message {
+    color: #fff;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 2rem 3rem;
+    background: rgba(30,30,30,0.7);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
 body.locked .container,
 body.locked .bg-video,
 body.locked audio {
@@ -79,44 +90,25 @@ body.locked audio {
     font-family: Satoshi-Medium;
 }
 
-.name {
+.glow {
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  margin-top: -10px;
+  color: white
 }
 
 .alias {
   font-family: Satoshi-MediumItalic;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
   color: #ffffff71;
   margin-top: -10px;
 }
 
-@keyframes glow {
+@-webkit-keyframes glow {
   from {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #00EAFF, 0 0 50px #00EAFF, 0 0 60px #00EAFF;
   }
   to {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #00EAFF, 0 0 50px #00EAFF, 0 0 60px #00EAFF, 0 0 65px #00EAFF;
   }
-}
-
-.avatar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-/*  box-shadow: 0 2px 16px rgba(0,0,0,0.3);  */
 }
