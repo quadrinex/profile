@@ -1,5 +1,9 @@
 @import url('satoshi.css');
 
+html {
+    background: #031016;
+}
+
 html, body {margin: 0; height: 100%; overflow: hidden}
 
 body {
