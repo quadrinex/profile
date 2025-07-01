@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="preload" href="main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="icon" href="avatar.gif" type="image/gif" >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Profil</title>
+    <link rel="icon" href="avatar.gif" type="image/gif" >
     <style>body { visibility: hidden; }</style>
+    <link id="maincss" rel="stylesheet" href="main.css">
     <noscript><link rel="stylesheet" href="main.css"></noscript>
 </head>
 <body>
@@ -31,9 +31,17 @@
         <source src="audio.mp3" type="audio/mpeg">
     </audio>
     <script>
+    function showBody() {
+        document.body.style.visibility = 'visible';
+    }
+    var maincss = document.getElementById('maincss');
+    if (maincss.sheet) {
+        showBody();
+    } else {
+        maincss.addEventListener('load', showBody);
+    }
     window.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('locked');
-        document.body.style.visibility = 'visible';
         function playAudioOnce() {
             document.getElementById('welcome-overlay').style.display = 'none';
             document.body.classList.remove('locked');
