@@ -172,15 +172,6 @@ body.locked audio {
   z-index: 2;
 }
 
-.acc1c1 { /* premier compte colonne 1 */ }
-.acc2c1 { /* deuxième compte colonne 1 */ }
-.acc3c1 { /* troisième compte colonne 1 */ }
-.acc4c1 { /* quatrième compte colonne 1 */ }
-.acc1c2 { /* premier compte colonne 2 */ }
-.acc2c2 { /* deuxième compte colonne 2 */ }
-.acc3c2 { /* troisième compte colonne 2 */ }
-.acc4c2 { /* quatrième compte colonne 2 */ }
-
 .acctext{
   padding-left: 10px;
   color: #fff;
